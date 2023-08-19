@@ -1,0 +1,9 @@
+org\example\user\UserAction.class
+org\example\page\PageLogin.class
+org\example\page\RegPage.class
+org\example\user\User.class
+org\example\constants\RestConfig.class
+org\example\page\RePassPage.class
+org\example\constants\BrowsConst.class
+org\example\page\MainPage.class
+org\example\page\ProfPage.class
