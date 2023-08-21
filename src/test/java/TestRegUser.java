@@ -13,13 +13,11 @@ public class TestRegUser extends BaseTest {
 
     @Before
     public void setUp() {
-        initializationWebDriver();
         mainPage = new MainPage(driver);
         pageLogin = new PageLogin(driver);
         regPage = new RegPage(driver);
         mainPage.clickLoginButton();
         pageLogin.clickRegistrationButton();
-
     }
 
     @Test

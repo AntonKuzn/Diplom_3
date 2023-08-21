@@ -4,9 +4,6 @@ import io.qameta.allure.Step;
 import org.example.constants.BrowsConst;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.openqa.selenium.WebElement;
 
 public class MainPage extends BrowsConst {
     private final By makeBurger = By.xpath("//div[contains(@class,'tab_tab__1SPyG tab_tab_type_current__2BEPc')]");

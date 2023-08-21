@@ -1,4 +1,3 @@
-import org.example.constants.BrowsConst;
 import org.example.page.MainPage;
 import org.example.page.PageLogin;
 import org.example.page.RePassPage;
@@ -19,7 +18,6 @@ public class LoginTest extends BaseTest {
 
     @Before
     public void setUp() {
-        initializationWebDriver();
         mainPage = new MainPage(driver);
         pageLogin = new PageLogin(driver);
         regPage = new RegPage(driver);

@@ -1,33 +1,37 @@
-
-import org.example.constants.RestConfig;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.example.page.MainPage;
 import org.example.user.User;
-
 import org.example.user.UserAction;
 import org.junit.After;
+import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+import static org.example.constants.RestConfig.URL;
 
 public class BaseTest {
-    WebDriver driver;
     String email;
     String password;
+    private final String chromeBrowser = "Chrome";
+    private final String yandexBrowser = "Yandex";
+    protected WebDriver driver;
+    protected MainPage mainPage;
 
+    @Before
     public void initializationWebDriver() {
+        WebDriverManager.chromedriver().setup();
+        selectBrowser(yandexBrowser);
+        mainPage = new MainPage(driver);
+        driver.get(URL);
+        driver.manage().window().maximize();
+    }
 
-        //Для запуска тестов на Yandex
-       System.setProperty("webdriver.chrome.driver", "C:\\Users\\ПК\\SW\\WebDriver\\bin\\chromedriver.exe");
-        ChromeOptions options = new ChromeOptions();
-        options.setBinary("C:\\Program Files (x86)\\Yandex\\YandexBrowser\\Application\\browser.exe");
-        driver = new ChromeDriver(options);
-        driver.get(RestConfig.URL);
-
-        //Для запуска тестов на Chrome
-   /*  ChromeOptions options = new ChromeOptions();
-        options.addArguments("--remote-allow-origins=*");
-        driver = new ChromeDriver(options);
-        driver.get(RestConfig.URL);*/
-
+    public void selectBrowser(String browser) {
+        if (browser.equals(yandexBrowser)) {
+            driver = new ChromeDriver();
+        } else if (browser.equals(chromeBrowser)) {
+            System.setProperty("webdriver.chrome.driver", "src\\main\\resources\\yandexdriver.exe");
+            driver = new ChromeDriver();
+        }
     }
 
     @After

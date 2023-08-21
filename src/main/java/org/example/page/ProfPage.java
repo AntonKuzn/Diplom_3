@@ -3,14 +3,10 @@ package org.example.page;
 
 import io.qameta.allure.Step;
 import org.example.constants.BrowsConst;
-import org.example.constants.RestConfig;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import java.time.Duration;
-
 public class ProfPage extends BrowsConst {
-
     By logoutButton = By.xpath(".//button[text()='Выход']");
     By buttonConstructor = By.linkText("Конструктор");
     By logoButton = By.className("AppHeader_header__logo__2D0X2");

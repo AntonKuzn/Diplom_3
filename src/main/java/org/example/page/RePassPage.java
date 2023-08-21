@@ -1,5 +1,4 @@
 package org.example.page;
-
 import io.qameta.allure.Step;
 import org.example.constants.BrowsConst;
 import org.openqa.selenium.By;

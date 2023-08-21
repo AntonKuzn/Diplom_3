@@ -1,12 +1,10 @@
 package org.example.page;
-
 import io.qameta.allure.Step;
 import org.example.constants.BrowsConst;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class RegPage extends BrowsConst {
-
 
     private final By registerTitle = By.xpath("//h2[text()='Регистрация']");
     private final By userName = By.xpath(".//label[text()='Имя']/../input");

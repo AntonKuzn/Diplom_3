@@ -7,9 +7,8 @@ import org.junit.Test;
 public class ConstructorTest extends BaseTest {
     MainPage mainPage;
 
-    @Before
+   @Before
     public void setUp() {
-        initializationWebDriver();
         mainPage = new MainPage(driver);
     }
 

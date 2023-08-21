@@ -1,5 +1,4 @@
 package org.example.user;
-
 import io.qameta.allure.Step;
 import org.example.constants.RestConfig;
 import io.restassured.response.Response;

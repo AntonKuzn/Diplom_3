@@ -4,7 +4,6 @@ import org.example.page.ProfPage;
 import org.example.page.RegPage;
 import org.example.user.User;
 import org.example.user.UserAction;
-
 import io.qameta.allure.junit4.DisplayName;
 import org.junit.Assert;
 import org.junit.Before;
@@ -19,7 +18,6 @@ public class ProfilePageTest extends BaseTest {
 
     @Before
     public void setUp() {
-        initializationWebDriver();
         mainPage = new MainPage(driver);
         pageLogin = new PageLogin(driver);
         regPage = new RegPage(driver);
